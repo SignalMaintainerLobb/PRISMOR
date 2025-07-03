@@ -129,7 +129,7 @@ But on the mainline? It’s different: Dealer can hedge bad calls with futures a
 - There’s no visible coiling because time value distributes and hedging moves off-exchange
 
 High IV may bring better weather
-We see the switch may occur from high IV world and too many bad call or puts were taken by dealer 
+We see the switch may occur from high IV world and too many bad calls or puts were taken by dealer 
 - Bad calls and puts from dealer end wind up but,
 - instead of the typical low volume to high volume stocks, SPY IWM QQQ VXX can be hedged into futures and out of direct calls and puts
 - The moment the dealers decide that bad calls and puts can be offset by letting time drain and hedges losses with futures is often the
