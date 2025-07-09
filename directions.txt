@@ -1,6 +1,6 @@
 open BASH 
 
-cd C:\\Users\\ your path
+cd C:\\your path
 
 
 pip install flask-cors
@@ -10,9 +10,11 @@ pip install flask-cors
 python server.py
 
 
+download all files in folder and call it pigos-mini in your choosen path
+
 
 chrome extensions
-unpack and choose pigos-mini or path folder for extension
+unpack and choose pigos-mini folder 
 
 
 
