@@ -4,9 +4,10 @@ Cornwall ON Canada
 
 project name :   PRISMOR  ( Protective Implied Signal MonitOR ) 
 raw code     :   CTC      ( Chart Traffic Controller ) commented code
-bare code    :   CTC_bare ( Chart Traffic Controller ) bare of comments easy code
 GUI          :   PIGOS    ( Protective Implied Generator Of Signals )
 Purpose      :   Understanding Markets 			
+
+project in developement stages this readme and code is older UI in order to base the next better UI
 
 
 THESIS:
