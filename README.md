@@ -7,8 +7,8 @@ raw code     :   CTC      ( Chart Traffic Controller ) commented code
 GUI          :   PIGOS    ( Protective Implied Generator Of Signals )
 Purpose      :   Understanding Markets 			
 
-project in developement stages this readme and code is older UI in order to base the next better UI
-
+project in developement stages 
+REPLACED BY PIGOS-mini and PIGOS-mini UI reaadme
 
 THESIS:
 
