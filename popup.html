@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini PIGOS</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #121212;
+      color: #f0f0f0;
+      padding: 10px;
+    }
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+      background: #1a1a1a;
+      color: #f0f0f0;
+      border: 1px solid #6cc0ff;
+      border-radius: 3px;
+      width: 100%;
+    }
+    button {
+      background: #6cc0ff;
+      color: #000;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 3px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+    #output {
+      background: #1e1e1e;
+      padding: 10px;
+      border-left: 3px solid #6cc0ff;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    ul {
+      padding-left: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <label>Ticker:</label>
+    <input type="text" id="tickerInput" placeholder="e.g. SPY" />
+
+    <label>PUT Premium %:</label>
+    <input type="number" id="putPrem" placeholder="e.g. 1.5" step="0.01" />
+
+    <label>BW Premium %:</label>
+    <input type="number" id="bwPrem" placeholder="e.g. 0.8" step="0.01" />
+
+    <label>Yesterday's Close Price:</label>
+    <input type="number" id="lastClose" placeholder="e.g. 620.10" step="0.01" />
+
+    <button id="analyze">Analyze Signal</button>
+    <button id="launchTab">🧭 Open Persistent Cockpit</button>
+  </div>
+
+  <div id="output">Waiting for signal...</div>
+
+  <div id="fragilityBox">
+    <h3>📈 Drift Ratio Comparison</h3>
+    <div id="vspRatio"></div>
+    <div id="nvdaRatio"></div>
+    <div id="msftRatio"></div>
+  </div>
+
+  <h3>🧭 Logged Alerts:</h3>
+  <ul id="alertLog"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>

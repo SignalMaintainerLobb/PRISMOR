@@ -1,0 +1,20 @@
+cd C:\\Users\\atefo\\pigos-mini
+
+
+pip install flask-cors
+
+
+
+python server.py
+
+
+
+chrome extensions
+unpack and choose pigos-mini or path folder for extension
+
+
+
+
+
+
+
