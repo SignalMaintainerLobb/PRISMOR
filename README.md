@@ -3,7 +3,6 @@ Co piloted by Warren Lobb
 ON Canada
 
 project name :   PRISMOR  ( Protective Implied Signal MonitOR ) 
-bare code    :   CTC_bare ( Chart Traffic Controller ) bare of comments easy code used in python as base project
 GUI          :   PIGOS    ( Protective Implied Generator Of Signals )
 Purpose      :   Understanding Markets 			
 
