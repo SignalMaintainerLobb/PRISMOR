@@ -1,4 +1,6 @@
-cd C:\\Users\\atefo\\pigos-mini
+open BASH 
+
+cd C:\\Users\\ your path
 
 
 pip install flask-cors
@@ -11,6 +13,12 @@ python server.py
 
 chrome extensions
 unpack and choose pigos-mini or path folder for extension
+
+
+
+open extension
+
+go into cockpit view
 
 
 
