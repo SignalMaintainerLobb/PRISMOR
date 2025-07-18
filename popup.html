@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PIGOS</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #121212;
+      color: #f0f0f0;
+      padding: 10px;
+    }
+
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+      background: #1a1a1a;
+      color: #f0f0f0;
+      border: 1px solid #6cc0ff;
+      border-radius: 3px;
+      width: 100%;
+    }
+     #buttonBar {
+     margin-top: 50px; 
+}
+    button {
+      background: #6cc0ff;
+      color: #000;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 3px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    .tickerBox {
+      background: #1e1e1e;
+      padding: 10px;
+      border: 1px solid #6cc0ff;
+      border-radius: 5px;
+      width: 280px;
+      flex-shrink: 0;
+    }
+
+    #tickerRow {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .frameOutput {
+      background: #1e1e1e;
+      padding: 10px;
+      border-left: 3px solid #6cc0ff;
+      border-radius: 5px;
+      margin-top: 10px
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+
+    h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="tickerRow">
+    <!-- Box 1 -->
+    <div class="tickerBox">
+      <h3>📦 Ticker Box 1</h3>
+      <label>Ticker:</label>
+      <input type="text" id="tickerInput" placeholder="e.g. SPY" />
+
+      <label>PUT Premium %:</label>
+      <input type="number" id="putPrem" placeholder="e.g. 1.5" step="0.01" />
+
+      <label>BW Premium %:</label>
+      <input type="number" id="bwPrem" placeholder="e.g. 0.8" step="0.01" />
+
+      <label>Yesterday's Close Price:</label>
+      <input type="number" id="lastClose" placeholder="e.g. 620.10" step="0.01" />
+
+      <label>VXX BW Premium % (3M out):</label>
+      <input type="number" id="vxxBwPrem" placeholder="e.g. 3.2" step="0.01" />
+
+      <label>VXX Yesterday Close:</label>
+      <input type="number" id="vxxClose" placeholder="Fetched automatically" readonly />
+
+      <div class="frameOutput" id="output1">Waiting for Ticker 1 signal...</div>
+      <ul id="alertLog1"></ul>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="tickerBox">
+      <h3>📦 Ticker Box 2</h3>
+      <label>Ticker:</label>
+      <input type="text" id="tickerInput2" placeholder="e.g. QQQ" />
+
+      <label>PUT Premium %:</label>
+      <input type="number" id="putPrem2" placeholder="e.g. 1.2" step="0.01" />
+
+      <label>BW Premium %:</label>
+      <input type="number" id="bwPrem2" placeholder="e.g. 0.9" step="0.01" />
+
+      <label>Yesterday's Close Price:</label>
+      <input type="number" id="lastClose2" placeholder="e.g. 435.67" step="0.01" />
+
+      <div class="frameOutput" id="output2">Waiting for Ticker 2 signal...</div>
+      <ul id="alertLog2"></ul>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="tickerBox">
+      <h3>📦 Ticker Box 3</h3>
+      <label>Ticker:</label>
+      <input type="text" id="tickerInput3" placeholder="e.g. IWM" />
+
+      <label>PUT Premium %:</label>
+      <input type="number" id="putPrem3" placeholder="e.g. 1.4" step="0.01" />
+
+      <label>BW Premium %:</label>
+      <input type="number" id="bwPrem3" placeholder="e.g. 0.6" step="0.01" />
+
+      <label>Yesterday's Close Price:</label>
+      <input type="number" id="lastClose3" placeholder="e.g. 190.20" step="0.01" />
+
+      <div class="frameOutput" id="output3">Waiting for Ticker 3 signal...</div>
+      <ul id="alertLog3"></ul>
+    </div>
+  </div>
+
+  <div id="fragilityBox">
+    <h3>📈 Drift Ratio Comparison (Ticker 1 only)</h3>
+    <div id="vspRatio"></div>
+    <div id="nvdaRatio"></div>
+    <div id="msftRatio"></div>
+  </div>
+
+  <div id="buttonBar">
+    <button id="updateClose">📅 Update Last Close</button>
+    <button id="analyze">Analyze Signal</button>
+    <button id="launchTab">🧭 Open Persistent Cockpit</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

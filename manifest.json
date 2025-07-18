@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "PIGOS",
+  "version": "1",
+  "description": "Signal cockpit with SPY zone scanner and percent-based drift ratios (NVDA, MSFT, SPY/VSP)",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs"],
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "launch.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
